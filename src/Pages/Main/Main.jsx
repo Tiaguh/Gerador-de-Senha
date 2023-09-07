@@ -48,7 +48,7 @@ export default function Main() {
 
     return (
         <div className="container">
-            <h1>Gerador de Senha</h1>
+            <h1>Gerador de Senha 🔐</h1>
 
             <div className="gerador">
 
@@ -71,23 +71,23 @@ export default function Main() {
                 <div className="options-container">
 
                     <div className="option">
-                        <input type="checkbox" id="letras" onChange={handleCheckboxChange} />
+                        <input className="check-box" type="checkbox" id="letras" onChange={handleCheckboxChange} />
                         <p>Letras</p>
                     </div>
 
                     <div className="option">
-                        <input type="checkbox" id="numeros" onChange={handleCheckboxChange} />
+                        <input className="check-box" type="checkbox" id="numeros" onChange={handleCheckboxChange} />
                         <p>Números</p>
                     </div>
 
                     <div className="option">
-                        <input type="checkbox" id="caracteresEspeciais" onChange={handleCheckboxChange} />
+                        <input className="check-box" type="checkbox" id="caracteresEspeciais" onChange={handleCheckboxChange} />
                         <p>Símbolos</p>
                     </div>
 
                 </div>
 
-                <div>
+                <div className='button-container'>
                     <button
                         className='botão'
                         onClick={sortearValores}
