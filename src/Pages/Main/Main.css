@@ -14,8 +14,8 @@
 }
 
 .container h1 {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 34px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
 }
 
 .gerador {
@@ -46,7 +46,7 @@
 }
 
 .result p {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .range-container p {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 20px;
 
     font-weight: 600;
@@ -93,7 +93,7 @@
 }
 
 .option p {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
 
