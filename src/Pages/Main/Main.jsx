@@ -14,7 +14,9 @@ import {
     OptionText,
     ButtonContainer,
     Button
-} from './MainStyled.js'
+} from './MainStyled.js';
+
+import { toast } from 'react-toastify';
 
 export default function Main() {
     const [result, setResult] = useState('');
@@ -43,9 +45,27 @@ export default function Main() {
         let randomPassword = '';
 
         if (numberCharacters < 1) {
-            alert("Selecione alguns números!")
+            toast.warn("Select some numbers!", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
         } else if (selectCharacters.length === 0) {
-            alert("Selecione os tipos de dígitos que você quer na senha.");
+            toast.warn("Select the types of digits you want in the password.", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
         } else {
             for (let i = 0; i < numberCharacters; i++) {
                 const randomIndex = Math.floor(Math.random() * availableCaracteres.length);
