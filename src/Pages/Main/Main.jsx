@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
-import './Main.css';
+
+import {
+    Container,
+    TitleContainer,
+    Content,
+    ResultContainer,
+    Result,
+    RangeContainer,
+    Range,
+    CharacterLength,
+    OptionsContainer,
+    Option,
+    OptionText,
+    ButtonContainer,
+    Button
+} from './MainStyled.js'
 
 export default function Main() {
     const [result, setResult] = useState('');
@@ -53,55 +68,51 @@ export default function Main() {
     }
 
     return (
-        <div className="container">
-            <h1>Password Generator 🔐</h1>
+        <Container>
+            <TitleContainer>Password Generator 🔐</TitleContainer>
 
-            <div className="gerador">
+            <Content>
 
-                <div className='result'>
-                    <p>{result}</p>
-                </div>
+                <ResultContainer>
+                    <Result>{result}</Result>
+                </ResultContainer>
 
-                <div className='range-container'>
-                    <input
+                <RangeContainer>
+                    <Range
                         type="range"
                         min="0"
                         max="25"
                         value={numberCharacters}
                         onChange={(e) => setNumberCharacters(parseInt(e.target.value))}
-                        className="range-input"
                     />
-                    <p>{numberCharacters}</p>
-                </div>
+                    <CharacterLength>{numberCharacters}</CharacterLength>
+                </RangeContainer>
 
-                <div className="options-container">
+                <OptionsContainer>
 
-                    <div className="option">
-                        <input className="check-box" type="checkbox" id="letters" onChange={handleCheckboxChange} />
-                        <p>Letters</p>
-                    </div>
+                    <Option>
+                        <input type="checkbox" id="letters" onChange={handleCheckboxChange} />
+                        <OptionText>Letters</OptionText>
+                    </Option>
 
-                    <div className="option">
-                        <input className="check-box" type="checkbox" id="numbers" onChange={handleCheckboxChange} />
-                        <p>Numbers</p>
-                    </div>
+                    <Option>
+                        <input type="checkbox" id="numbers" onChange={handleCheckboxChange} />
+                        <OptionText>Numbers</OptionText>
+                    </Option>
 
-                    <div className="option">
-                        <input className="check-box" type="checkbox" id="symbols" onChange={handleCheckboxChange} />
-                        <p>Symbols</p>
-                    </div>
+                    <Option>
+                        <input type="checkbox" id="symbols" onChange={handleCheckboxChange} />
+                        <OptionText>Symbols</OptionText>
+                    </Option>
 
-                </div>
+                </OptionsContainer>
 
-                <div className='button-container'>
-                    <button
-                        className='botão'
-                        onClick={generatePassword}
-                    >
-                        Gerar
-                    </button>
-                </div>
-            </div>
-        </div>
+                <ButtonContainer>
+                    <Button onClick={generatePassword}>
+                        Generate
+                    </Button>
+                </ButtonContainer>
+            </Content>
+        </Container>
     );
 }

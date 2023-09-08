@@ -1,4 +1,6 @@
-.container {
+import styled from 'styled-components';
+
+export const Container = styled.div`
     width: 100vw;
     height: 100vh;
 
@@ -11,14 +13,14 @@
     gap: 25px;
 
     background-color: #F1F1F1;
-}
+`;
 
-.container h1 {
+export const TitleContainer = styled.h1`
     font-family: 'Rubik', sans-serif;
     font-size: 30px;
-}
+`;
 
-.gerador {
+export const Content = styled.div`
     width: 25vw;
     height: 55vh;
 
@@ -30,12 +32,14 @@
 
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
+    justify-content: center;
 
-.result {
+    gap: 15px;
+`;
+
+export const ResultContainer = styled.div`
     width: 100%;
-    height: 15%;
+    height: 45px;
 
     display: flex;
     align-items: center;
@@ -43,66 +47,58 @@
     padding-inline: 8px;
 
     border: 2px solid #045ccc;
-}
+`;
 
-.result p {
+export const Result = styled.p`
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
-}
+`;
 
-.range-container {
+export const RangeContainer = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-
-    gap: 15px;
 
     width: 100%;
     height: 15%;
-}
+`;
 
-.range-container p {
+export const Range = styled.input`
+    width: 90%
+`;
+
+export const CharacterLength = styled.p`
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
+`;
 
-    font-weight: 600;
-}
-
-.range-input {
+export const OptionsContainer = styled.div`
     width: 100%;
-
-    cursor: pointer;
-}
-
-.options-container {
-    width: 100%;
-    height: 35%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    
     gap: 10px;
-}
+`;
 
-.option {
+export const Option = styled.div`
     display: flex;
     align-items: center;
 
     gap: 15px;
-}
+`;
 
-.option p {
+export const OptionText = styled.p`
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
-}
+`;
 
-.button-container {
+export const ButtonContainer = styled.div`
     width: 100%;
-    height: 25%;
-}
+`;
 
-.botão {
+export const Button = styled.button`
     width: 100%;
 
     background-color: #045ccc;
@@ -113,4 +109,4 @@
     padding: 12px;
 
     border: none;
-}
+`;
